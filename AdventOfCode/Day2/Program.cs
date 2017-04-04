@@ -21,7 +21,7 @@ namespace Day2
             // Adjust the current directory to the correct folder level
             Directory.SetCurrentDirectory(@"..\..\");
 
-            // Read the data from the input file, break on new line
+            // Read the data from the input file, break on new line character
             List<string> inputs = System.IO.File.ReadAllText(@"PuzzleInput.txt").Split(new string[] { Environment.NewLine }, StringSplitOptions.None).ToList();
 
             // String for holding our result to Part 1
@@ -36,9 +36,11 @@ namespace Day2
                 // Loops through the characters in each string
                 foreach (var character in input)
                 {
+                    // Move the given direction on the keypad
                     keypad.Move(character);
                 }
 
+                // Add the final key to our result
                 result += keypad.GetNumber();
             }
 
@@ -55,7 +57,7 @@ namespace Day2
             int column;
             int row;
 
-            // Create a KeyPad with the given numbers of row and columns
+            // Create a KeyPad with the given numbers of rows and columns
             public MagicKeyPad(int rows, int columns)
             {
                 // Initialize array of the correct size
