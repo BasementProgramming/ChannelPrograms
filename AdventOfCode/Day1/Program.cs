@@ -65,12 +65,12 @@ namespace Day1
             }
 
             /*
-              Take the given number of blocks in the given direction, update your distance from the origin (x-axis, y-axis). Assume
-              North and East are postive, South and West are negative (like a graph)
+              Walk the given number of blocks in the given direction, update your distance from the origin (x-axis, y-axis). Assume
+              North and East are postive, South and West are negative (like a graph). Track each step for the second part of the challenge.
              */
             public void Walk(char direction, int steps)
             {
-                // Loops through the steps and update your tracker for the second part of the challenge
+                // Loop through the steps and update your tracker for the second part of the challenge
                 for (int step = 0; step < steps; step++)
                 {
                     switch (direction)
